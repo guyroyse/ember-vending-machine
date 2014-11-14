@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><html>
+  <title>Ember Vendng Machine</title>
+</head>
+
+<body>
+
+  <script type="text/x-handlebars" data-template-name="index">
+
+    <h1>Welcome to the Machine</h1>
+
+    <p>Display: {{ display }}</p>
+
+    {{#each coin in coins}}
+      <button {{action "insertCoin" coin.key}}>{{ coin.label }}</button>
+    {{/each}}
+
+  </script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+  <script src="bower_components/ember/ember.js"></script>
+  <script src="vending-machine.js"></script>
+
+</body>
+
+</html>
